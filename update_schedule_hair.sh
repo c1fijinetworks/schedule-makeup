@@ -19,7 +19,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Schedule.Hair',
+      title: 'Schedule.Makeup',
       links: [
         { text: "Claim Your Vanity URL – $99", href: getPermalink('/pricing') },
         { text: 'Why We Support Stylists', href: getPermalink('/about') },
@@ -34,8 +34,8 @@ export const footerData = {
   socialLinks: [],
   footNote: \`
     <div class="inline-flex items-center justify-center flex-wrap">
-      <img class='w-5 h-5 mr-2 rounded-sm align-middle' src='/images/footer-icon.webp' alt='Schedule Hair' loading='lazy'>
-      <span class="align-middle">✂️ Fill your chairs. | © \${new Date().getFullYear()} <a class="text-blue-600 underline dark:text-muted" href="#">Schedule.Hair</a></span>
+      <img class='w-5 h-5 mr-2 rounded-sm align-middle' src='/images/footer-icon.webp' alt='Schedule.Makeup' loading='lazy'>
+      <span class="align-middle">✂️ Fill your chairs. | © \${new Date().getFullYear()} <a class="text-blue-600 underline dark:text-muted" href="#">Schedule.Makeup</a></span>
     </div>
   \`,
 };
@@ -49,7 +49,7 @@ export const lifetimeDeal = {
   price: 99,
   period: 'One-time payment',
   items: [
-    { description: 'Custom Vanity URL (yoursalon.schedule.hair)' },
+    { description: 'Custom Vanity URL (yoursalon.schedule.makeup)' },
     { description: 'Premium Salon Branding Setup' },
     { description: 'Real-time Calendar Availability' },
     { description: 'Mobile-First Booking Interface' },
@@ -81,7 +81,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
 const metadata = {
-  title: 'Schedule.Hair | Premium Vanity Booking URLs for Stylists',
+  title: 'Schedule.Makeup | Premium Vanity Booking URLs for Stylists',
   description: 'Replace clunky booking links with a beautiful, branded scheduling page on your own professional domain. One-time fee, lifetime access.',
   ignoreTitleTemplate: true,
 };
@@ -95,7 +95,7 @@ const metadata = {
   <Hero2
     tagline="Boutique Web Development for Salons"
     title='<span class="text-accent dark:text-white">Fill Your Chairs with a Pro Booking Link.</span>'
-    subtitle="We replace clunky generic links with a beautiful scheduling page on your own professional vanity URL (yoursalon.schedule.hair). Same-day setup, premium hosting included."
+    subtitle="We replace clunky generic links with a beautiful scheduling page on your own professional vanity URL (yoursalon.schedule.makeup). Same-day setup, premium hosting included."
     actions={[
       { variant: 'primary', text: 'Get Your Booking Link Today', href: '/pricing/' },
       { text: 'See How It Works', href: '#howitworks' },
@@ -104,7 +104,7 @@ const metadata = {
     poster="/images/hero-poster.webp" 
     image={{ width: 1024, height: 576 }}
     testimonial={{
-        quote: "Generic links felt cheap. Switching to my custom schedule.hair page made my brand look high-end instantly. My clients love the new flow!",
+        quote: "Generic links felt cheap. Switching to my custom schedule.makeup page made my brand look high-end instantly. My clients love the new flow!",
         name: "Sarah L., Salon Owner"
     }}
   />
@@ -113,7 +113,7 @@ const metadata = {
     class="-mt-16"
     id="features"
     title="Luxury Booking, Simplified"
-    subtitle="We handle the tech. You focus on the hair. Here is how we upgrade your business:"
+    subtitle="We handle the tech. You focus on the makeup. Here is how we upgrade your business:"
     columns={2}
     items={[
         { title: 'Custom Salon Branding', description: 'Your booking page perfectly matches your logo, colors, and unique salon vibe. No more generic templates.', icon: 'tabler:palette' },
@@ -129,7 +129,7 @@ const metadata = {
         { title: 'Mobile-First Design', description: '90% of your clients book on their phones. Our apps are lightning-fast and intuitive on every device.', icon: 'tabler:device-mobile' },
         { title: 'Service-Based Pricing', description: 'Clearly display Balayage, Cuts, and Colors with tiered pricing and custom durations.', icon: 'tabler:scissors' },
         { title: 'Real-Time Sync', description: 'Your availability is always up to date. Eliminate double bookings and awkward scheduling conflicts.', icon: 'tabler:refresh' },
-        { title: 'Vanity URL for Life', description: 'Own a professional address like velvet.schedule.hair that clients will actually remember.', icon: 'tabler:link' },
+        { title: 'Vanity URL for Life', description: 'Own a professional address like velvet.schedule.makeup that clients will actually remember.', icon: 'tabler:link' },
     ]}
     image={{ src: '/images/testimonial-2.webp', alt: 'Stylist managing appointments' }}
   >
@@ -153,7 +153,7 @@ const metadata = {
         },
         {
           title: 'Step 2: We Build & Host',
-          description: 'Our studio builds your custom booking app and hosts it on your professional schedule.hair domain.',
+          description: 'Our studio builds your custom booking app and hosts it on your professional schedule.makeup domain.',
           icon: 'tabler:number-2',
         },
         {
@@ -164,7 +164,7 @@ const metadata = {
       ]}
       image={{ 
         src: '/images/testimonial-6.webp', 
-        alt: 'Schedule Hair system in action',
+        alt: 'Schedule.Makeup system in action',
         width: 1024,
         height: 1024 
       }}
@@ -182,7 +182,7 @@ const metadata = {
     items={[
         { title: 'Do I have to pay monthly?', description: 'No. We believe in ownership. You pay once for the setup and professional hosting, and you own your booking link for life.', icon: 'tabler:help' },
         { title: 'Can I change my services later?', description: 'Absolutely. Your system is flexible. You can update pricing, hours, and services whenever your business evolves.', icon: 'tabler:settings' },
-        { title: 'What is a Vanity URL?', description: 'Instead of a messy link like "booking-app.com/u/12345?salon=true", you get a clean, branded link like "yoursalon.schedule.hair".', icon: 'tabler:link' },
+        { title: 'What is a Vanity URL?', description: 'Instead of a messy link like "booking-app.com/u/12345?salon=true", you get a clean, branded link like "yoursalon.schedule.makeup".', icon: 'tabler:link' },
         { title: 'Is my data secure?', description: 'Yes. We use industry-standard encryption and premium hosting to ensure your clients data and your calendar are always protected.', icon: 'tabler:lock' },
     ]}
   >
@@ -211,7 +211,7 @@ const metadata = {
       },
     ]}
     callToAction={{ text: 'Get Your Booking Link Today', href: '/pricing/' }}
-    image={{ src: '/images/testimonial-3.webp', alt: 'Schedule Hair Booking', width: 600, height: 600 }}
+    image={{ src: '/images/testimonial-3.webp', alt: 'Schedule.Makeup Booking', width: 600, height: 600 }}
   />
 </Layout>
 INNER
@@ -224,7 +224,7 @@ cat << 'INNER' > src/components/widgets/Announcement.astro
   <div class="flex items-center gap-2">
     <span>✨ </span>
     <span class="text-white font-medium">
-      Ditch generic links. Get your branded <strong>yoursalon.schedule.hair</strong> booking page today.
+      Ditch generic links. Get your branded <strong>yoursalon.schedule.makeup</strong> booking page today.
     </span>
   </div>
   <div class="absolute right-4 top-0 h-full flex items-center">
@@ -243,8 +243,8 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
 const metadata = {
-  title: 'Our Mission - Schedule.Hair | Built for Stylists',
-  description: 'We built Schedule.Hair because hair is art, and your booking experience should reflect that.',
+  title: 'Our Mission - Schedule.Makeup | Built for Stylists',
+  description: 'We built Schedule.Makeup because makeup is art, and your booking experience should reflect that.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -253,7 +253,7 @@ const metadata = {
 <Hero2
     tagline="You Create the Art."
     title='<span class="text-accent dark:text-white">We Fill the Chairs.</span>'
-    subtitle="Schedule.Hair was born from a simple observation: Most booking software looks like a spreadsheet from 1995. We build modern, luxury booking engines for the elite hair professional."
+    subtitle="Schedule.Makeup was born from a simple observation: Most booking software looks like a spreadsheet from 1995. We build modern, luxury booking engines for the elite makeup professional."
     video="/images/hero-animation.mp4" 
     poster="/images/hero-poster.webp"
     actions={[
@@ -263,9 +263,9 @@ const metadata = {
   <Content
     isReversed
     items={[
-        { title: 'The Professional Edge', description: 'Generic links feel temporary. A custom schedule.hair domain tells your clients that you are a serious, established professional.', icon: 'tabler:certificate' },
+        { title: 'The Professional Edge', description: 'Generic links feel temporary. A custom schedule.makeup domain tells your clients that you are a serious, established professional.', icon: 'tabler:certificate' },
         { title: 'Time is Money', description: 'Every minute you spend texting back and forth about availability is a minute you aren’t behind the chair. We automate the admin.', icon: 'tabler:clock' },
-        { title: 'Luxury Experience', description: 'From the first click to the final confirmation, we ensure your client’s journey is as polished as the hair you style.', icon: 'tabler:sparkles' },
+        { title: 'Luxury Experience', description: 'From the first click to the final confirmation, we ensure your client’s journey is as polished as the makeup you style.', icon: 'tabler:sparkles' },
     ]}
   >
     <Fragment slot="content">
@@ -289,11 +289,11 @@ INNER
 
 # 6. Update Pricing Page Logic
 # Note: Update item_name in the pricing widget to match the new concept
-sed -i 's/HairTestimonial QR Review Engine/Schedule.Hair Professional Booking Engine/g' src/components/widgets/Pricing.astro
+sed -i 's/HairTestimonial QR Review Engine/Schedule.Makeup Professional Booking Engine/g' src/components/widgets/Pricing.astro
 sed -i 's/HTFP99/SHLTD99/g' src/components/widgets/Pricing.astro
 
-chmod +x update_schedule_hair.sh
-./update_schedule_hair.sh
-rm update_schedule_hair.sh
+chmod +x update_schedule.makeup.sh
+./update_schedule.makeup.sh
+rm update_schedule.makeup.sh
 
-echo "Schedule.Hair Refactor Complete! Please push to Github."
+echo "Schedule.Makeup Refactor Complete! Please push to Github."

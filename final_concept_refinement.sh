@@ -19,7 +19,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Schedule.Hair — Boutique Booking for Stylists',
+      title: 'Schedule.Makeup — Boutique Booking for Stylists',
       links: [
         { text: "Claim Your Spot – $99", href: getPermalink('/pricing') },
         { text: 'Why We Love Salons', href: getPermalink('/about') },
@@ -32,7 +32,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [],
-  footNote: '✂️ Schedule Hair — Fill Your Chairs on Autopilot. | © ' + new Date().getFullYear() + ' Schedule.Hair',
+  footNote: '✂️ Schedule.Makeup — Fill Your Chairs on Autopilot. | © ' + new Date().getFullYear() + ' Schedule.Makeup',
 };
 INNER
 
@@ -47,7 +47,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
 const metadata = { 
-  title: 'Pricing - Schedule.Hair | Professional Digital Presence', 
+  title: 'Pricing - Schedule.Makeup | Professional Digital Presence', 
   description: 'Elevate your salon brand with a professional vanity URL. One-time fee for a lifetime of premium bookings.' 
 };
 ---
@@ -64,7 +64,7 @@ const metadata = {
     title="Premium Features Included"
     columns={3}
     items={[
-      { title: 'Branded Vanity URL', description: 'A clean, memorable web address (yoursalon.schedule.hair) that belongs to you.', icon: 'tabler:link' },
+      { title: 'Branded Vanity URL', description: 'A clean, memorable web address (yoursalon.schedule.makeup) that belongs to you.', icon: 'tabler:link' },
       { title: 'Google Business Sync', description: 'Expert help linking your URL to the blue Google "Schedule" button for maximum SEO.', icon: 'tabler:brand-google' },
       { title: 'Boutique UX', description: 'A mobile-first booking interface designed to look like a luxury salon app.', icon: 'tabler:device-mobile' },
       { title: 'Unlimited Potential', description: 'Zero caps on appointments, services, or revenue. Your business, your growth.', icon: 'tabler:infinity' },
@@ -76,7 +76,7 @@ const metadata = {
   <FAQs
     title="Frequently Asked Questions"
     items={[
-        { title: 'How does this help my Google ranking?', description: 'Google prioritizes salons with high-quality, relevant links. A clean schedule.hair domain linked to your profile signals to Google that your digital presence is managed and professional.', icon: 'tabler:trending-up' },
+        { title: 'How does this help my Google ranking?', description: 'Google prioritizes salons with high-quality, relevant links. A clean schedule.makeup domain linked to your profile signals to Google that your digital presence is managed and professional.', icon: 'tabler:trending-up' },
         { title: 'Can I use this with my existing calendar?', description: 'Yes! We act as your high-end front door. We can link your vanity URL to any existing system or provide you with our own custom calendar interface.', icon: 'tabler:layout' },
     ]}
   />
@@ -130,7 +130,7 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
             <input type="hidden" name="business" value="ZFG89TK2KESFG" />
             
             {/* THIS ITEM NAME IS UPDATED DYNAMICALLY BY THE SCRIPT BELOW */}
-            <input type="hidden" id="dynamic-item-name" name="item_name" value="Schedule Hair Professional Vanity URL Setup" />
+            <input type="hidden" id="dynamic-item-name" name="item_name" value="Schedule.Makeup Professional Vanity URL Setup" />
             
             <input type="hidden" name="item_number" value="SHURL99" />
             <input type="hidden" name="amount" value="99.00" />
@@ -156,7 +156,7 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
               <div class="mt-3 p-4 bg-white dark:bg-slate-950 rounded-xl border-2 border-dashed border-blue-600/30 flex items-center gap-3">
                 <Icon name="tabler:world" class="w-5 h-5 text-blue-600" />
                 <span class="text-sm font-bold truncate text-slate-600 dark:text-slate-400">
-                    https://<span id="vanity-preview" class="text-blue-600 underline decoration-2 underline-offset-4">yoursalon</span>.schedule.hair
+                    https://<span id="vanity-preview" class="text-blue-600 underline decoration-2 underline-offset-4">yoursalon</span>.schedule.makeup
                 </span>
               </div>
             </div>
@@ -212,7 +212,7 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
         const url = input.value || 'yoursalon';
         const salon = salonInput.value || 'Salon Name';
         // This updates the PayPal cart text dynamically on click
-        dynamicItem.value = `Setup: ${url}.schedule.hair | Salon: ${salon}`;
+        dynamicItem.value = `Setup: ${url}.schedule.makeup | Salon: ${salon}`;
       });
     }
   }
