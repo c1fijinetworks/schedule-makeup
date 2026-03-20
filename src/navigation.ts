@@ -18,7 +18,7 @@ export const footerData = {
       title: 'Schedule.Makeup — Boutique Booking for Makeup Artists',
       links: [
         { text: "Claim Your Spot – $99", href: getPermalink('/pricing') },
-        { text: 'Why We Love Studios', href: getPermalink('/about') },
+        { text: 'Why We Love Makeup Studios', href: getPermalink('/about') },
         { text: 'Support', href: getPermalink('/contact') },
       ],
     },
