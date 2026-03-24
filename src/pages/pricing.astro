@@ -4,37 +4,95 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import { lifetimeDeal } from '~/data/pricingData';
+import Hero from '~/components/widgets/Hero.astro';
 
-const metadata = { 
-  title: 'Pricing - Schedule.Makeup | Professional Digital Presence', 
-  description: 'Elevate your makeup brand with a professional vanity URL. One-time fee for a lifetime of premium bookings.' 
+const metadata = {
+  title: 'Pricing - Schedule.Makeup | Professional Digital Presence',
+  description: 'Elevate your studio brand with a professional vanity URL. One-time fee for a lifetime of premium bookings. No monthly fees.',
+  ignoreTitleTemplate: true,
 };
 ---
+
 <Layout metadata={metadata}>
   <HeroText 
-    tagline="Elevate Your Digital Handshake"
-    title="Your Professional Identity, <span class='text-accent'>Perfected.</span>" 
-    subtitle="Generic booking links look temporary. We build you a branded makeup vanity URL that signals trust and elite artistry."
+    tagline="The Last Booking System You'll Ever Buy ⭐⭐⭐⭐⭐"
+    title="Stop Paying Monthly Fees." 
+    subtitle="Most booking software charges $50–$150 every single month. We charge a flat $99 one-time fee with total setup. That's $600+ back in your pocket in the first year alone."
   />
-  <Pricing prices={[lifetimeDeal]} />
+
+  <div class="-mt-16">
+    <Pricing
+      id="pricing"
+      title="Invest Once. Grow Forever."
+      subtitle="Full White-Glove Setup Included. We build the engine; you focus on your artistry."
+      prices={[lifetimeDeal]}
+    />
+  </div>
+
   <Features3
-    title="Premium Features Included"
+    title="What is included in your $99 setup?"
+    subtitle="We handle the heavy lifting so you can stay behind the kit."
     columns={3}
     items={[
-      { title: 'Branded Vanity URL', description: 'A clean address (yourname.schedule.makeup) that belongs to you.', icon: 'tabler:link' },
-      { title: 'Google Business Sync', description: 'Help linking your URL to the Google "Schedule" button for SEO.', icon: 'tabler:brand-google' },
-      { title: 'Boutique UX', description: 'A mobile-first interface designed to look like a luxury beauty app.', icon: 'tabler:device-mobile' },
-      { title: 'Unlimited Potential', description: 'Zero caps on glam sessions or revenue. Your growth is our priority.', icon: 'tabler:infinity' },
-      { title: 'Immediate Trust', description: 'Show clients you are an established artist from the first click.', icon: 'tabler:shield-check' },
-      { title: 'Lifetime Setup', description: 'Pay once, own it forever. No recurring SaaS fees.', icon: 'tabler:tool' },
+      {
+        title: 'Premium Vanity URL',
+        description: 'A clean web address (yourstudio.schedule.makeup) that belongs to you and your studio brand.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Google Business Sync',
+        description: 'We help you link your vanity URL to the blue Google "Schedule" button for maximum local SEO impact.',
+        icon: 'tabler:brand-google',
+      },
+      {
+        title: 'Boutique Mobile UX',
+        description: 'A mobile-first booking interface designed to look like a high-end luxury beauty application.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Local SEO Dominance',
+        description: 'A custom branded domain is a massive trust signal for Google search rankings in your city.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Unlimited Potential',
+        description: 'No "per-booking" fees or caps. Take 10 glams or 1,000—your price never changes.',
+        icon: 'tabler:infinity',
+      },
+      {
+        title: 'Lifetime Support',
+        description: 'Get all future technical maintenance and basic URL management for life at no extra cost.',
+        icon: 'tabler:refresh',
+      },
     ]}
   />
+
   <FAQs
-    title="Frequently Asked Questions"
+    class="-mt-16 px-6"
+    title="Pricing FAQ"
     items={[
-        { title: 'How does this help my ranking?', description: 'A clean schedule.makeup domain linked to your profile signals to Google that your digital presence is managed and professional.', icon: 'tabler:trending-up' },
-        { title: 'Can I use this with my existing calendar?', description: 'Yes! We act as your high-end front door to any existing system.', icon: 'tabler:layout' },
+        { title: 'Why is it a one-time fee?', description: 'We prefer to charge a fair setup fee for our labor rather than "renting" you software forever. We support independent artists.', icon: 'tabler:coin' },
+        { title: 'What if I am not tech-savvy?', description: 'We do the entire setup for you. If you can send a text, you can use our system.', icon: 'tabler:tool' },
+        { title: 'Are there any hidden costs?', description: 'Zero. No maintenance fees, no hosting fees, and no "success" fees. $99 is the total cost.', icon: 'tabler:check' },
+        { title: 'What if I open a second studio?', description: 'Your $99 license covers one vanity URL. Contact us for deep discounts on additional locations!', icon: 'tabler:building-store' },
+    ]}
+  >
+    <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
+  </FAQs>
+
+  <Hero class="-mt-16">
+    <Fragment slot="image">
+      <img src="/images/testimonial-5.webp" alt="Artist reviewing digital glam schedule" class="mx-auto rounded-md w-full shadow-lg" loading="lazy" />
+    </Fragment>
+  </Hero>
+
+  <CallToAction
+    title="Ready to Own Your Professional Identity?"
+    subtitle="Claim your vanity URL today and have your custom booking engine ready for your first client tomorrow ⭐⭐⭐⭐⭐"
+    actions={[
+      { variant: 'primary', text: 'Secure My $99 Lifetime Deal', href: '#pricing' },
     ]}
   />
 </Layout>

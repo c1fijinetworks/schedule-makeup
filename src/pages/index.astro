@@ -10,47 +10,86 @@ import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
-const metadata = { title: 'Schedule.Makeup | The Pro Choice for Makeup Studio Vanity URLs', description: 'Replace generic links with a beautiful makeup scheduling page on your own professional domain. Instant Google Business Profile integration.' };
+const metadata = { 
+  title: 'Schedule.Makeup | The Pro Choice for Makeup Studio Vanity URLs', 
+  description: 'Replace generic links with a beautiful makeup scheduling page on your own professional domain. Instant Google Business Profile integration.' 
+};
 ---
 <Layout metadata={metadata}>
-  <Fragment slot="header"><Header {...headerData} isSticky /></Fragment>
+  <Fragment slot="header">
+    <Header {...headerData} isSticky />
+  </Fragment>
+
   <Hero2
     tagline="Boutique Web Development for Makeup Artists"
     title='<span class="text-accent dark:text-white">Your Studio. Your Domain. Your Rules.</span>'
     subtitle="Generic booking links look cheap. We build you a professional vanity booking URL (yourstudio.schedule.makeup) that integrates directly with your Google Business 'Schedule' button. Same-day setup, zero tech stress."
-    actions={[{ variant: 'primary', text: 'Get Your Booking Link Today', href: '/pricing/' }, { text: 'See How It Works', href: '#howitworks' }]}
+    actions={[
+      { variant: 'primary', text: 'Get Your Booking Link Today', href: '/pricing/' }, 
+      { text: 'See How It Works', href: '#howitworks' }
+    ]}
     image={{ src: '/images/hero-poster.webp', width: 1024, height: 576 }}
   />
+
   <Features
+    class="-mt-16"
     id="features"
     title="Dominate Your Local Market"
     items={[
         { title: 'The "Schedule" Button Pro', description: 'We help you link your vanity URL to the official Google "Schedule" button so clients can book directly from Search.', icon: 'tabler:brand-google' },
-        { title: 'Branded Vanity URLs', description: 'Ditch the long, ugly ID strings. Own a link your clients can actually type and remember.', icon: 'tabler:link' },
-        { title: 'Aesthetic Design', description: 'Every app is custom-styled to match your studio’s aesthetic and artistry.', icon: 'tabler:palette' },
+        { title: 'Instant Vanity URLs', description: 'Ditch the long, ugly ID strings. Own a link your clients can actually type and remember.', icon: 'tabler:link' },
+        { title: 'Boutique Aesthetic', description: 'Every app is custom-styled to match your studio’s aesthetic and artistry.', icon: 'tabler:palette' },
         { title: 'Same-Day Delivery', description: 'If you order by 2PM, your vanity URL and booking engine are live before you finish your next glam.', icon: 'tabler:bolt' },
     ]}
   />
+
+  <Content
+    class="-mt-16"
+    items={[
+        { title: 'Rank Higher on Google Maps', description: 'Google prioritizes studios with professional custom domains. We help you jump to the top of the "Makeup Near Me" list.', icon: 'tabler:map-pin' },
+        { title: 'Showcase Your Artistry', description: 'We design your booking page to act as a high-end portfolio, building instant trust with new visitors 24/7.', icon: 'tabler:user-check' },
+        { title: 'Beat the Competition', description: 'When new clients compare artists, the one with a professional domain and seamless UX always wins.', icon: 'tabler:trending-up' },
+        { title: 'Mobile-First Priority', description: 'Our pages are optimized for the "Instagram to Booking" flow, ensuring zero friction for mobile users.', icon: 'tabler:device-mobile' },
+    ]}
+    image={{ src: '/images/testimonial-2.webp', alt: 'Elite makeup artistry' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <span class="text-accent dark:text-white">Why a Vanity URL is Your Best Digital Handshake</span>
+      </h3>
+    </Fragment>
+    <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
+  </Content>
+
   <div id="howitworks" class="scroll-mt-20">
     <Steps2
       title="Same-Day Professional Setup"
+      subtitle="Three simple steps to claim your professional identity."
       items={[
-        { title: '1. Claim Your URL', description: 'Pick your vanity name and secure the $99 lifetime license.', icon: 'tabler:number-1' },
-        { title: '2. We Build the Engine', description: 'Our team builds your mobile-first booking app and styles it to your brand.', icon: 'tabler:number-2' },
-        { title: '3. Glam & Book', description: 'We help you drop the link into your Google Profile and Instagram. Start taking appointments instantly.', icon: 'tabler:number-3' },
+        { title: 'Step 1: Claim Your URL', description: 'Pick your vanity name and secure the $99 lifetime license.', icon: 'tabler:number-1' },
+        { title: 'Step 2: We Build The Engine', description: 'Our team builds your mobile-first booking app and styles it to your brand.', icon: 'tabler:number-2' },
+        { title: 'Step 3: Glam & Book', description: 'We help you drop the link into your Google Profile and Instagram. Start taking appointments instantly.', icon: 'tabler:number-3' },
       ]}
-      image={{ src: '/images/testimonial-6.webp', alt: 'Makeup Scheduling interface' }}
+      image={{ src: '/images/testimonial-6.webp', alt: 'Makeup booking interface' }}
     />
   </div>
-  <Pricing title='One-Time Investment. Forever Access.' prices={[lifetimeDeal]} />
+
+  <Pricing 
+    title='<span class="text-accent dark:text-white">One-Time Investment. Forever Access.</span>' 
+    prices={[lifetimeDeal]} 
+  />
+
   <FAQs
+    class="-mt-16 px-6"
     title="Deep Dive: How Schedule.Makeup Works"
     subtitle="Everything you need to know about upgrading your studio's digital presence."
     items={[
-        { title: 'What exactly is a "Vanity URL"?', description: 'Most booking software gives you a messy link like "app.sq.com/u/123-abc". We replace that with a clean, branded address like <strong>glam.schedule.makeup</strong>. It looks professional and builds trust.', icon: 'tabler:link' },
-        { title: 'How do you help with Google Business Profiles?', description: 'We provide a step-by-step "White-Glove" guide to linking your new URL to the blue "Schedule" button on your Google Business listing, boosting your local SEO signals.', icon: 'tabler:brand-google' },
-        { title: 'Is it really "Same-Day" Setup?', description: 'Yes. Our team works in real-time. Once you provide your basic info, we deploy your app within hours.', icon: 'tabler:bolt' },
-        { title: 'Do I need to cancel my existing booking software?', description: 'No! You can use Schedule.Makeup as a beautiful "front-door" for your existing system, making the booking experience feel luxury.', icon: 'tabler:device-laptop' },
+        { title: 'What exactly is a "Vanity URL"?', description: 'Most booking software gives you a messy link like "app.sq.com/u/123-abc". We replace that with a clean, branded address like <strong>glam.schedule.makeup</strong>.', icon: 'tabler:link' },
+        { title: 'How do you help with Google Business Profiles?', description: 'We provide a step-by-step "White-Glove" guide to linking your new URL to the blue "Schedule" button on your Google Business listing.', icon: 'tabler:brand-google' },
+        { title: 'Is it really "Same-Day" Setup?', description: 'Yes. Once you provide your basic info (services and availability), we deploy your app within hours.', icon: 'tabler:bolt' },
+        { title: 'Do I need to cancel my existing booking software?', description: 'No! You can use Schedule.Makeup as a beautiful "front-door" for your existing system.', icon: 'tabler:device-laptop' },
     ]}
-  />
+  >
+     <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
+  </FAQs>
 </Layout>

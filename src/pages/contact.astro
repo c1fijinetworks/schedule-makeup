@@ -6,7 +6,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 
 const metadata = {
-  title: 'Contact Support | Schedule Makeup',
+  title: 'Contact Support | Schedule.Makeup',
   description: 'Have questions about the lifetime deal for your makeup studio? Contact our team today.',
   ignoreTitleTemplate: true,
 };
@@ -16,17 +16,32 @@ const metadata = {
   <HeroText 
     tagline="We're in your corner ⭐⭐⭐⭐⭐"
     title="Let's Talk About Your Studio." 
-    subtitle="Have questions about the lifetime deal? Need a bulk discount for multiple makeup artists? We respond faster than a setting spray dries."
+    subtitle="Have questions about the vanity URL setup? Need a bulk discount for multiple artists? We respond faster than a setting spray dries."
   />
+
   <GoogleContactForm />
+
   <Features
     class="-mt-16"
     columns={3}
     items={[
-      { title: 'Studio Discounts', description: 'Running a large studio? Contact us for custom bulk pricing on 3+ artists.', icon: 'tabler:building-store' },
-      { title: 'White-Glove Support', description: 'Need help with your booking widget? We are here to help.', icon: 'tabler:headset' },
-      { title: 'Partnerships', description: 'Are you a beauty consultant? Let’s work together.', icon: 'tabler:users' },
+      {
+        title: 'Multi-Artist Discounts',
+        description: 'Running a full studio or academy? Contact us for custom bulk pricing on 3+ vanity URLs.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'White-Glove Support',
+        description: 'Need help with your Google Business integration? Let us handle the tech for you.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Brand Partnerships',
+        description: 'Are you a beauty consultant or brand educator? Let’s talk about working together.',
+        icon: 'tabler:users',
+      },
     ]}
   />
-  <Hero class="-mt-16" image={{ src: '/images/testimonial-7.webp', alt: 'Schedule Makeup happy client' }} />
+
+  <Hero class="-mt-16" image={{ src: '/images/testimonial-7.webp', alt: 'Schedule.Makeup happy artist' }} />
 </Layout>
