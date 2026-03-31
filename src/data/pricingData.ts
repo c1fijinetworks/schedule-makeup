@@ -1,5 +1,5 @@
 export const lifetimeDeal = {
-  title: 'Vanity Booking Plan (First 300 Studios)',
+  title: 'Vanity Booking Plan<br/>(First 300 Studios)',
   subtitle: 'Lock in your $99 forever deal today.<br/><strong class="text-red-600 dark:text-red-400 text-lg">Price increases to $29/mo after the first 300 spots are gone.</strong>',
   price: 99,
   period: 'One-time payment',

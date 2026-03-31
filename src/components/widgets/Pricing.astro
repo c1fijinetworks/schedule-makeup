@@ -20,11 +20,12 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
           </div>
         )}
 
-        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg whitespace-nowrap">
             Guaranteed Same-Day Setup
         </div>
 
-        <h3 class="text-3xl font-black text-slate-900 dark:text-white mt-4">{price.title}</h3>
+        {/* NEATENED TITLE: Added set:html and leading-tight for the 2-line look */}
+        <h3 class="text-3xl font-black text-slate-900 dark:text-white mt-4 leading-tight" set:html={price.title}></h3>
         
         {price.subtitle && <p class="mt-4 text-muted leading-relaxed" set:html={price.subtitle}></p>}
         
@@ -70,7 +71,7 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
                   placeholder="yourstudio" 
               />
               
-              <!-- FIXED PREVIEW BOX: Impossible to cut off, centered, redundancy (https://) removed for mobile space -->
+              <!-- HIGH END MOBILE PREVIEW BOX -->
               <div class="mt-4 p-4 bg-white dark:bg-slate-950 rounded-xl border-2 border-dashed border-blue-600/40 flex flex-col items-center justify-center shadow-inner overflow-hidden">
                 <div class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-1 font-bold">Your Live Address</div>
                 <div class="font-mono break-words text-center w-full">
@@ -95,7 +96,7 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
             </div>
 
             <button type="submit" class="w-full py-5 px-4 bg-red-600 hover:bg-red-700 text-white font-black rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 text-xl uppercase tracking-tighter">
-              {price.callToAction?.text || 'Order Now Same Day'}
+              Order Now Same Day
             </button>
             <div class="flex items-center justify-center gap-2 mt-6 text-slate-400">
                 <Icon name="tabler:credit-card" class="w-4 h-4" />
